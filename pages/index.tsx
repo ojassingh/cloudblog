@@ -10,7 +10,7 @@ Amplify.configure({ ...awsExports, ssr: true });
 
 export async function getServerSideProps({req}:any) {
   const SSR = withSSRContext({ req });
-  try {
+  try { 
     const response = await SSR.API.graphql({ query: listPosts });
     return {
       props: {
